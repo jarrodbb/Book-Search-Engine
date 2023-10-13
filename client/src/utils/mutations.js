@@ -50,4 +50,14 @@ export const SAVE_BOOK = gql`
   }
 `;
 
-// export const REMOVE_BOOK
+//id might have to be set to string
+export const REMOVE_BOOK = gql`
+  mutation removeBook($bookId: ID!) {
+    removeBook(bookId: $bookId) {
+      _id
+      username
+      savedBooks
+      bookCount
+    }
+  }
+`;
