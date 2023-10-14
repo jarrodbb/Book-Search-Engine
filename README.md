@@ -12,17 +12,18 @@
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-To accomodate the every increasing need to deliver personalised application, this Book search engine has been created. By utilising the Google Book API a user can search and save all the books they desire. Never forget what book you want to read again, just take advantage of this wonderful application
+To accomodate the every increasing need to deliver personalised applications, this Book Search Engine has been created. By utilising the Google Book API a user can search and save all the books they desire. Never forget what book you want to read again, just take advantage of this wonderful application
 
 This application allows the user to,
 
 - Sign up 
-- Login in 
+- Login
 - Search for books (utilising the Google Books API)
 - Save books
 - Remove saved books
+- Log out
 
-To ensure a fully functional MERN stack application an Apollo server was setup to use GraphQL queries and Mutations allowing for the ability to fetch and modify data. The appropriate middleware suitable for a graphQL API was accommodated for along with the creation of an Apollo Provider so request can communicate with the Apollo Server.
+To ensure a fully functional MERN stack application an Apollo server was setup to use GraphQL Queries and Mutations allowing for the ability to fetch and modify data. The appropriate middleware suitable for a graphQL API was accommodated for, along with the creation of an Apollo Provider to ensure requests can communicate with the Apollo Server.
 
 To deploy this application, Heroku was chosen along with MongoDB database using MongoDB Atlas
 
