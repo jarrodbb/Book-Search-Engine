@@ -1,3 +1,10 @@
+//typeDefs defined
+//Query defined for user. returns user
+//Mutations defined for
+//login. returns Auth
+//adduser. returns Auth
+// saveBook. returns User
+//removeBook. returns User
 const typeDefs = `
   type User {
     _id: ID!

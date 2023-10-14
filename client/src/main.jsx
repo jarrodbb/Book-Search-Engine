@@ -1,4 +1,5 @@
 import ReactDOM from 'react-dom/client'
+//Import from react to use react router
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 

@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
+//Import to be able to use mutations
 import { useMutation } from "@apollo/client";
 import { Container, Col, Form, Button, Card, Row } from "react-bootstrap";
 
 import Auth from "../utils/auth";
 
-import { saveBook, searchGoogleBooks } from "../utils/API";
+//API to search for books using the google API
+import {  searchGoogleBooks } from "../utils/API";
 import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
+//Import the mutation to save the book to the db
 import { SAVE_BOOK } from "../utils/mutations";
 
 const SearchBooks = () => {
@@ -17,6 +20,7 @@ const SearchBooks = () => {
   // create state to hold saved bookId values
   const [savedBookIds, setSavedBookIds] = useState(getSavedBookIds());
 
+  //Set up mutation for saveBook
   const [saveBook, { error }] = useMutation(SAVE_BOOK);
 
   // set up useEffect hook to save `savedBookIds` list to localStorage on component unmount
@@ -72,6 +76,7 @@ const SearchBooks = () => {
     }
 
     try {
+      //implement the mutation
       const { data } = await saveBook({
         variables: {
           authors: bookToSave.authors,
@@ -82,10 +87,6 @@ const SearchBooks = () => {
           link: bookToSave.link,
         },
       });
-
-      // if (!data) {
-      //   throw new Error("something went wrong!");
-      // }
 
       // if book successfully saves to user's account, save book id to state
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
