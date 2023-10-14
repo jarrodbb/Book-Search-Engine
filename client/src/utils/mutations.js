@@ -44,7 +44,15 @@ export const SAVE_BOOK = gql`
       _id
       username
       email
-      savedBooks
+      password
+      savedBooks {
+        bookId
+        authors
+        description
+        title
+        image
+        link
+      }
       bookCount
     }
   }
@@ -56,7 +64,16 @@ export const REMOVE_BOOK = gql`
     removeBook(bookId: $bookId) {
       _id
       username
-      savedBooks
+      email
+      password
+      savedBooks {
+        bookId
+        authors
+        description
+        title
+        image
+        link
+      }
       bookCount
     }
   }

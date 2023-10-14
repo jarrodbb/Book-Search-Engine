@@ -40,6 +40,7 @@ const resolvers = {
       { authors, description, title, bookId, image, link },
       context
     ) => {
+      console.log("hello");
       if (context.user) {
         const user = await User.findOneAndUpdate(
           { _id: context.user._id },
