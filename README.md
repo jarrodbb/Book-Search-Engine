@@ -12,8 +12,23 @@
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-Fullstack application utilising MERN
-Apollo graphql
+To accomodate the every increasing need to deliver personalised application, this Book search engine has been created. By utilising the Google Book API a user can search and save all the books they desire. Never forget what book you want to read again, just take advantage of this wonderful application
+
+This application allows the user to,
+
+- Sign up 
+- Login in 
+- Search for books (utilising the Google Books API)
+- Save books
+- Remove saved books
+
+To ensure a fully functional MERN stack application an Apollo server was setup to use GraphQL queries and Mutations allowing for the ability to fetch and modify data. The appropriate middleware sutiable for a graphQL API was accomodated for along with the creation of an APollo Provider so request can communicate with the Apollo Server.
+
+To deploy this application, Heroku was chosen along with MongoDB database using MongoDB Atlas
+
+Check it out and start saving some books.
+
+[Book Search](https://book-search-wonder-app-425fb89194be.herokuapp.com/)
 
 ## Table of Contents
 
@@ -91,15 +106,16 @@ For development, the following were required in the package.json,
 ### Code
 
 [client](https://github.com/jarrodbb/Book-Search-Engine/tree/main/client)
+
 [server](https://github.com/jarrodbb/Book-Search-Engine/tree/main/server)
 
 ## Usage
 
 ### Search for books
 
-The user is able to search for any book by using the input field. 
+The user is able to search for any book by using the input field.
 
-The user is present with several search results that include the book's 
+The user is present with several search results that include the book's title, author, description, image, and a link to that book on the Google Books site
 
 When the user is NOT logged in, they do not have the ability to save a book
 
@@ -111,15 +127,39 @@ To signup the user is required to input a username, email and password
 
 To signin the user is required to input an email and password
 
+The user is validated
+
 ### Search books (loggedin)
+
+The user is present with several search results that include the book's title, author, description, image, and a link to that book on the Google Books site
+
+When loggedin, the user is presented with a button `Save This Book`
 
 ### Save Book
 
+The user is able to `Save This Book`
+
+Saving the book, adds the book to their profile
+
+Once the book is saved, the user is presented with a message "This book has already been saved!"
+
 ### Saved Books
+
+If the user navigates to `See Your Books` they are presented with all the books that have been saved.
+
+A count at the top of the page indicates the number of books saved by the user
+
+The books display the book's title, author, description, image, and a link to that book on the Google Books site
 
 ### Remove Book
 
+When the user is viewing their saved books, they are presented with a `Delete this Book!` button enabling them to remove a specific book.
+
+Removing the book removes it from thier profile as well as reducing the book count
+
 ### Log out
+
+When the user clicks the `Logout` button they are logged out of the site. Logging in again is required to check Authorisation to save books, see saved books or delete books
 
 ## License
 
