@@ -37,7 +37,8 @@ const resolvers = {
     },
     saveBook: async (
       parent,
-      { authors, description, title, bookId, image, link }
+      { authors, description, title, bookId, image, link },
+      context
     ) => {
       if (context.user) {
         const user = await User.findOneAndUpdate(
