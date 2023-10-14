@@ -22,7 +22,7 @@ This application allows the user to,
 - Save books
 - Remove saved books
 
-To ensure a fully functional MERN stack application an Apollo server was setup to use GraphQL queries and Mutations allowing for the ability to fetch and modify data. The appropriate middleware sutiable for a graphQL API was accomodated for along with the creation of an APollo Provider so request can communicate with the Apollo Server.
+To ensure a fully functional MERN stack application an Apollo server was setup to use GraphQL queries and Mutations allowing for the ability to fetch and modify data. The appropriate middleware suitable for a graphQL API was accommodated for along with the creation of an Apollo Provider so request can communicate with the Apollo Server.
 
 To deploy this application, Heroku was chosen along with MongoDB database using MongoDB Atlas
 
@@ -44,9 +44,9 @@ Check it out and start saving some books.
 
 [Book Search](https://book-search-wonder-app-425fb89194be.herokuapp.com/)
 
-For development, the following were required in the package.json,
+### The Following package.json files were required 
 
-### Server
+#### Server package.json
 
 ```
 
@@ -64,7 +64,7 @@ For development, the following were required in the package.json,
 
 ```
 
-### Client
+#### Client package.json
 
 ```
   "dependencies": {
@@ -115,7 +115,11 @@ For development, the following were required in the package.json,
 
 The user is able to search for any book by using the input field.
 
+![homepage-not-loggedin](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/b61b2339-2a35-4554-9afd-63c19669718a)
+
 The user is present with several search results that include the book's title, author, description, image, and a link to that book on the Google Books site
+
+![puppy-search-not-loggedin](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/c18a407d-44b4-4a7a-acb9-499db7165ef5)
 
 When the user is NOT logged in, they do not have the ability to save a book
 
@@ -123,17 +127,23 @@ When the user is NOT logged in, they do not have the ability to save a book
 
 To signup the user is required to input a username, email and password
 
+![sign-up](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/7c3b5d07-c04b-423f-8713-4b501420ac24)
+
 ### Sign in
 
-To signin the user is required to input an email and password
+To sign-in the user is required to input an email and password
 
 The user is validated
 
-### Search books (loggedin)
+![login](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/070aa7f4-6e99-4a28-bea4-94f6e4fe9824)
+
+### Search books (logged-in)
 
 The user is present with several search results that include the book's title, author, description, image, and a link to that book on the Google Books site
 
-When loggedin, the user is presented with a button `Save This Book`
+When logged-in, the user is presented with a button `Save This Book`
+
+![puppy-search-loggedin](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/6448596c-96f2-4265-98b3-ce259c375344)
 
 ### Save Book
 
@@ -143,6 +153,8 @@ Saving the book, adds the book to their profile
 
 Once the book is saved, the user is presented with a message "This book has already been saved!"
 
+![puppy-search-loggedin-saved-some-books](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/506362ad-5f6f-421a-a37c-7042fac83b26)
+
 ### Saved Books
 
 If the user navigates to `See Your Books` they are presented with all the books that have been saved.
@@ -151,15 +163,21 @@ A count at the top of the page indicates the number of books saved by the user
 
 The books display the book's title, author, description, image, and a link to that book on the Google Books site
 
+![saved-books](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/4c8117b8-2711-4198-b646-da5840ecd8f6)
+
 ### Remove Book
 
 When the user is viewing their saved books, they are presented with a `Delete this Book!` button enabling them to remove a specific book.
 
-Removing the book removes it from thier profile as well as reducing the book count
+Removing the book removes it from their profile as well as reducing the book count
+
+![deleted-books](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/f09f5a01-5bd3-40b0-aa3a-dab6ac8e019c)
 
 ### Log out
 
 When the user clicks the `Logout` button they are logged out of the site. Logging in again is required to check Authorisation to save books, see saved books or delete books
+
+![logged-out](https://github.com/jarrodbb/Book-Search-Engine/assets/132813348/1328eb5e-603c-4aeb-976a-bddead7a253c)
 
 ## License
 
