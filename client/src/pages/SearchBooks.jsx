@@ -6,7 +6,7 @@ import { Container, Col, Form, Button, Card, Row } from "react-bootstrap";
 import Auth from "../utils/auth";
 
 //API to search for books using the google API
-import {  searchGoogleBooks } from "../utils/API";
+import { searchGoogleBooks } from "../utils/API";
 import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
 //Import the mutation to save the book to the db
 import { SAVE_BOOK } from "../utils/mutations";
@@ -45,6 +45,7 @@ const SearchBooks = () => {
       }
 
       const { items } = await response.json();
+      console.log(items);
 
       const bookData = items.map((book) => ({
         bookId: book.id,
@@ -52,6 +53,7 @@ const SearchBooks = () => {
         title: book.volumeInfo.title,
         description: book.volumeInfo.description || "no description",
         image: book.volumeInfo.imageLinks?.thumbnail || "",
+        link: book.volumeInfo.canonicalVolumeLink || "",
       }));
       console.log(bookData);
 
@@ -141,8 +143,10 @@ const SearchBooks = () => {
                     />
                   ) : null}
                   <Card.Body>
-                    <Card.Title>{book.title}</Card.Title>
-                    <p className="small">Authors: {book.authors}</p>
+                    <Card.Title><a href={book.link}>{book.title}</a></Card.Title>
+                    <p className="small">
+                      Authors: {book.authors}
+                    </p>
                     <Card.Text>{book.description}</Card.Text>
                     {Auth.loggedIn() && (
                       <Button
